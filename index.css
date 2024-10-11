@@ -6,16 +6,21 @@ body {
     padding: 0;
     color: white;
     font-family: 'Roboto', sans-serif;
+    background-color: black;
 }
 
 /*  Header section  */
 .header {
     height:50px;
     width: 100%;
-    background-color: #393939;
     display: flex;
     justify-content: space-between;
     padding : 0 35px 0 35px;
+}
+.header {
+    background: rgba(57, 57, 57, 0.7); /* Slightly transparent background with color #393939 */
+    backdrop-filter: blur(10px); /* Adds the glass effect */
+    -webkit-backdrop-filter: blur(10px);
 }
 
 
@@ -52,7 +57,7 @@ body {
 .list-item:hover{
     opacity: 0.5;
     cursor: pointer;
-    transform: scale(1.15,1.15);
+    transform: scale(1.1,1.1);
     
 }
 .user-icon{
@@ -68,3 +73,127 @@ body {
         font-size: 25px;
     }
 }
+
+
+/* Banner Carousel */
+
+#slider{
+    overflow: hidden;
+}
+#slider figure {
+    width: 500%;
+    position: relative;
+    margin: 0;
+    left:  0;
+    animation: 20s slider infinite;
+}
+#slider figure img{
+    width: 20%;
+    float: left;
+    height: 80vh;
+    object-fit: cover;
+}
+@keyframes slider {
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left : -300%
+    }
+    100%{
+        left : -400%
+    }
+    
+}
+
+/* sticky */
+.big-text{
+    font-size: 1.5em;
+    padding : 0 35px 0 35px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    gap : 35px;
+    padding : 0 35px 0 35px;
+}
+
+
+.products-menu{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* card */
+.card{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    padding : 20px 20px 20px 20px;
+    height: 450px;
+    background-color: white;
+    width: 330px;
+    border-radius: 8px;
+    border: 1px solid gray;
+}
+
+.card-heading{
+    font-size: 20px;
+    font-weight: 550;
+}
+.card-img{
+    margin: 15px 0px 15px 0;
+}
+.card-img img{
+    height: 200px;
+    display: block;
+    width: 200px;
+    object-fit: contain;
+    margin: auto;
+}
+.description{
+    font-size: 13px;
+    font-weight: 500;
+    margin-top:10px;
+}
+.price{
+    font-size: 15px;
+}
+
+.card-buttons{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+.card-buttons button{
+    padding : 7px;
+    width: 100px;
+    background-color: #57A7F8;
+    border: none;
+    color: white;
+    border-radius: 8px;
+}
+/* .mobiles:hover ~ .menu .option-1{
+    background-color: red;
+} */
