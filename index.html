@@ -24,10 +24,20 @@
                 <li class="list-item">Orders</li>
                 <li class="list-item">Profile</li>
             </ul>
+            <input type="checkbox" id="toggle">
             <div class="user-icon">
-                <span class="material-symbols-outlined">
-                    account_circle
-                </span>
+                <label for="toggle">
+                    <span class="material-symbols-outlined">
+                        account_circle
+                    </span>
+                </label>
+            </div>
+            <div class="side-bar">
+                <ul>
+                    <li>Cart</li>
+                    <li>Offers</li>
+                    <li>Profile</li>
+                </ul>
             </div>
          </div>
 
@@ -49,7 +59,7 @@
             <!-- Products -->
 
             <!-- Buds -->
-            <div class="buds product-category">
+            <div id="buds" class="buds product-category">
                 <div class="card">
                     <h1 class="card-heading">iPhone 15</h1>
                     <div class="card-img">
@@ -142,7 +152,7 @@
             </div>
 
             <!-- Watches -->
-            <div class="watches product-category">
+            <div id="watches" class="watches product-category">
                 <div class="card">
                     <h1 class="card-heading">iPhone 15</h1>
                     <div class="card-img">
@@ -210,7 +220,7 @@
             </div>
 
             <!-- iPad -->
-            <div class="tabs product-category">
+            <div id="tabs" class="tabs product-category">
                 <div class="card">
                     <h1 class="card-heading">iPhone 15</h1>
                     <div class="card-img tab-img">
@@ -278,7 +288,7 @@
             </div>
             
             <!-- Mobiles -->
-            <div class="mobiles product-category">
+            <div class="mobiles product-category" id = "mobiles">
                 <!-- one card -->
                  <div class="card">
                     <h1 class="card-heading">iPhone 15</h1>
@@ -377,10 +387,10 @@
             </div>
             <!-- Sticky -->
             <ul class="menu">
-                <li class="option-1">Mobiles</li>
-                <li class="option-2">iPad</li>
-                <li class="option-3">Watches</li>
-                <li class="option-4">Acessories</li>
+                <li class="option-1"> <a href="#mobiles">Mobiles</a></li>
+                <li class="option-2"><a href="#tabs">Tabs</a></li>
+                <li class="option-3"><a href="#watches">Watches</a></li>
+                <li class="option-4"><a href="#buds">Buds</a></li>
             </ul>
         </div>
          <!-- Footer -->
@@ -399,12 +409,16 @@
                 <p class="web-description" style="font-size: 14px;">Thank you for shopping with us! We take pride in offering a diverse selection of quality products, 
                     backed by excellent customer service. Your satisfaction is our priority, and we look forward to serving you again.</p>
                 <h1 class="social-media" style="font-size: 16px;">Social Media</h1>
-                <div class="social-media-icons d-flex">
-
+                <div class="social-media-icons d-flex" style="gap : 15px;margin-top: 10px;">
+                    <img src="/src/icon1.svg" style="height: 30px;">
+                    <img src="/src/icon2.png" style="height: 30px;">
+                    <img src="/src/icon3.png" style="height: 30px;">
+                    <img src="/src/icon1.svg" style="height: 30px;">
+                    <img src="/src/icon2.png" style="height: 30px;">
                 </div>
             </div>
             <div class="footer-right">
-            <h1 style="font-size: 17px;">For any queries</h1>
+            <h1 style="font-size: 17px;color: rgb(205, 70, 250);">For any queries</h1>
             <form>
                 <section>
                     <div class="username d-flex flex-col">

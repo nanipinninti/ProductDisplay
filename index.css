@@ -12,10 +12,12 @@ body {
 /*  Header section  */
 .header {
     height:50px;
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding : 0 35px 0 35px;
+    z-index: 1;
 }
 .header {
     background: rgba(57, 57, 57, 0.7); /* Slightly transparent background with color #393939 */
@@ -63,6 +65,36 @@ body {
 .user-icon{
     display: none;
 }
+
+#toggle{
+    display: none;
+}
+.side-bar{
+    display: none;
+}
+#toggle:checked ~ .side-bar{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+.side-bar{
+    position: absolute;
+    top : 52px;
+    right: 10px;
+    border-top: 0;
+    z-index: 10000;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(57, 57, 57, 0.7);
+}
+.side-bar ul{
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 @media screen and (max-width : 576px) {
     .header-right{
         display: none;
@@ -79,6 +111,7 @@ body {
 
 #slider{
     overflow: hidden;
+    z-index: 1;
 }
 #slider figure {
     width: 500%;
@@ -90,8 +123,11 @@ body {
 #slider figure img{
     width: 20%;
     float: left;
-    height: 100vh;
+    height: 50vh;
     object-fit: cover;
+    object-position: 30%,50%;
+    border-radius: 10px;
+    margin-top: 15px;
 }
 @keyframes slider {
     0%{
@@ -161,7 +197,7 @@ body {
     padding : 20px 20px 20px 20px;
     height: 450px;
     background-color: white;
-    width: 320px;
+    width: 330px;
     border-radius: 8px;
     border: 1px solid gray;
 }
@@ -231,17 +267,21 @@ body {
     transform: scale(1.1);
 }
 /*  Menu pagination*/
-.mobiles:hover ~ .menu .option-1{
+.mobiles:hover ~ .menu .option-1 a{
     color: #00FFFF
 }
-.tabs:hover ~ .menu .option-2{
+.tabs:hover ~ .menu .option-2 a{
     color: #00FFFF
 }
-.watches:hover ~ .menu .option-3{
+.watches:hover ~ .menu .option-3 a{
     color: #00FFFF
 }
-.buds:hover ~ .menu .option-4{
+.buds:hover ~ .menu .option-4 a{
     color: #00FFFF
+}
+a{
+    color: white;
+    text-decoration: none;
 }
 
 .separator{
@@ -265,7 +305,7 @@ body {
     flex-direction: column;
 }
 label{
-    font-size: 14px;
+    font-size: 12px;
 }
 .website-info img{
     height: 80px;
@@ -277,7 +317,7 @@ label{
 }
 .web-description{
     font-weight: 400;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 section{
     display: flex;
@@ -294,7 +334,7 @@ input ,textarea{
     border-radius: 5px;
     outline: none;
     margin-top: 5px;
-    color: gray;
+    color: white;
 }
 .submit{
     background-color: #57A7F8;
@@ -308,3 +348,27 @@ input ,textarea{
     float: right;
     margin-top: 10px;
 }
+@media screen and (max-width : 576px) {
+    .footer{
+        flex-direction: column;
+    }
+    .footer-left{
+        width: 100%;
+    }
+    .footer-right{
+        width: 100%;
+        margin-top: 25px;
+    }
+    section{
+        flex-direction: column;
+        gap:15px;
+    }
+    section div{
+        width: 100%;
+    }
+    .submit{
+        float: left;
+    }
+    
+}
+
