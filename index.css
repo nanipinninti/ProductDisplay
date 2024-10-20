@@ -129,6 +129,28 @@ body {
     border-radius: 10px;
     margin-top: 15px;
 }
+
+#pagination{
+    overflow: hidden;
+}
+#items{
+    width: 300%;
+    position: relative;
+    margin: 0;
+    left:  0;
+}
+.item{
+    float: left;
+    width: 33.3%;
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width : 576px) {
+    .item{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 @keyframes slider {
     0%{
         left: 0;
@@ -372,3 +394,61 @@ input ,textarea{
     
 }
 
+/* Pagination */
+.pagination-section{
+    margin: 15px 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pagination{
+    display: inline-block;
+}
+
+.pagination-button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: large;
+}
+
+#pagination{
+    overflow: hidden;
+}
+#items{
+    width: 300%;
+    position: relative;
+    margin: 0;
+    left:  0;
+}
+.item{
+    float: left;
+    width: 33.333%;
+    display: flex;
+    justify-content: space-between;
+}
+.active{
+    background-color: green;
+    border-radius: 4px;
+}
+.pagination{
+    margin-top: 15px;
+}
+@keyframes frame1 {
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes frame2 {
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes frame3 {
+    100% {
+        left: -200%;
+    }
+}

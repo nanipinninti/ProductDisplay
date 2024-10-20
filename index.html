@@ -393,6 +393,143 @@
                 <li class="option-4"><a href="#buds">Buds</a></li>
             </ul>
         </div>
+        
+        <!-- Pagination  -->
+        <h1 class="big-text">Pagination section</h1>
+        <div class="pagination-section" id="pagination">
+            <div id="items">
+                <div class="item" id="mobiles">
+                    <div class="card">
+                        <h1 class="card-heading">iPhone 15</h1>
+                        <div class="card-img">
+                            <img src="./src/Mobiles/mobile1.webp" alt="mobile-img" />
+                        </div>
+                        <h1 class="description">Best Gaming phone and high resloution pictures can be captures!</h1>
+                        <h1 class="price">Price : 54999/-</h1>
+                        <div class="card-buttons">
+                            <button>Cart</button>
+                            <button>Buy</button>
+                        </div>
+                     </div>
+
+                     <div class="card">
+                        <h1 class="card-heading">iPhone 15</h1>
+                        <div class="card-img">
+                            <img src="./src/Mobiles/mobile1.webp" alt="mobile-img" />
+                        </div>
+                        <h1 class="description">Best Gaming phone and high resloution pictures can be captures!</h1>
+                        <h1 class="price">Price : 54999/-</h1>
+                        <div class="card-buttons">
+                            <button>Cart</button>
+                            <button>Buy</button>
+                        </div>
+                     </div>
+
+                     <div class="card">
+                        <h1 class="card-heading">iPhone 15</h1>
+                        <div class="card-img">
+                            <img src="./src/Mobiles/mobile1.webp" alt="mobile-img" />
+                        </div>
+                        <h1 class="description">Best Gaming phone and high resloution pictures can be captures!</h1>
+                        <h1 class="price">Price : 54999/-</h1>
+                        <div class="card-buttons">
+                            <button>Cart</button>
+                            <button>Buy</button>
+                        </div>
+                     </div>
+                </div>
+
+                <div class="item" id="buds">
+                    <div class="card">
+                        <h1 class="card-heading">iPhone 15</h1>
+                        <div class="card-img">
+                            <img src="/src/Buds/buds.jpeg" alt="mobile-img" />
+                        </div>
+                        <h1 class="description">Best Gaming phone and high resloution pictures can be captures!</h1>
+                        <h1 class="price">Price : 54999/-</h1>
+                        <div class="card-buttons">
+                            <button>Cart</button>
+                            <button>Buy</button>
+                        </div>
+                     </div>
+
+                     <div class="card">
+                        <h1 class="card-heading">iPhone 15</h1>
+                        <div class="card-img">
+                            <img src="/src/Buds/buds.jpeg" alt="mobile-img" />
+                        </div>
+                        <h1 class="description">Best Gaming phone and high resloution pictures can be captures!</h1>
+                        <h1 class="price">Price : 54999/-</h1>
+                        <div class="card-buttons">
+                            <button>Cart</button>
+                            <button>Buy</button>
+                        </div>
+                     </div>
+
+                     <div class="card">
+                        <h1 class="card-heading">iPhone 15</h1>
+                        <div class="card-img">
+                            <img src="/src/Buds/buds.jpeg" alt="mobile-img" />
+                        </div>
+                        <h1 class="description">Best Gaming phone and high resloution pictures can be captures!</h1>
+                        <h1 class="price">Price : 54999/-</h1>
+                        <div class="card-buttons">
+                            <button>Cart</button>
+                            <button>Buy</button>
+                        </div>
+                     </div>
+                </div>
+
+                <div class="item" id="watches">
+                    <div class="card">
+                        <h1 class="card-heading">iPhone 15</h1>
+                        <div class="card-img">
+                            <img src="/src/Watches/watch.webp" alt="mobile-img" />
+                        </div>
+                        <h1 class="description">Best Gaming phone and high resloution pictures can be captures!</h1>
+                        <h1 class="price">Price : 54999/-</h1>
+                        <div class="card-buttons">
+                            <button>Cart</button>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h1 class="card-heading">iPhone 15</h1>
+                        <div class="card-img">
+                            <img src="/src/Watches/watch.webp" alt="mobile-img" />
+                        </div>
+                        <h1 class="description">Best Gaming phone and high resloution pictures can be captures!</h1>
+                        <h1 class="price">Price : 54999/-</h1>
+                        <div class="card-buttons">
+                            <button>Cart</button>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h1 class="card-heading">iPhone 15</h1>
+                        <div class="card-img">
+                            <img src="/src/Watches/watch.webp" alt="mobile-img" />
+                        </div>
+                        <h1 class="description">Best Gaming phone and high resloution pictures can be captures!</h1>
+                        <h1 class="price">Price : 54999/-</h1>
+                        <div class="card-buttons">
+                            <button>Cart</button>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <button class="pagination-button " onclick="moveLeft()">&laquo;</button>
+                <button class="pagination-button active btn1" id="btn1" onclick="moveCertain(1)">1</button>
+                <button class="pagination-button btn2" id="btn2" onclick="moveCertain(2)">2</button>
+                <button class="pagination-button btn3" id="btn3" onclick="moveCertain(3)">3</button>
+                <button class="pagination-button" onclick="moveRight()">&raquo;</button>
+            </div>
+        </div>
+
          <!-- Footer -->
         <hr class="separator">
 
@@ -439,5 +576,39 @@
             </form>
             </div>
         </div>
+        <script>
+            let current = 1;
+            const items = document.getElementById("items");
+
+            const moveLeft = () => {
+                if (current > 1) {
+                    document.querySelector(`#btn${current}`).classList.remove("active");
+                    items.style.animation = `frame${--current} 1s forwards`;
+                    document.querySelector(`#btn${current}`).classList.add("active");
+                }
+            };
+
+            const moveRight = () => {
+                if (current < 3) {
+                    document.querySelector(`#btn${current}`).classList.remove("active");
+                    items.style.animation = `frame${++current} 1s forwards`;
+                    document.querySelector(`#btn${current}`).classList.add("active");
+                }
+            };
+
+            const moveCertain = (a) => {
+                const currentButton = document.getElementById(`btn${current}`);
+                if (currentButton) {
+                    currentButton.classList.remove("active");
+                }
+                current = a; 
+                items.style.animation = `frame${current} 1s forwards`;
+                const newButton = document.getElementById(`btn${current}`);
+                if (newButton) {
+                    newButton.classList.add("active");
+                }
+            };
+
+        </script>
     </body>
 </html>
